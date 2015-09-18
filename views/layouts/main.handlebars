@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width">
   <title>{{title }}</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
   {{#if ENV_DEVELOPMENT}}
     <script src="http://localhost:35729/livereload.js"></script>
   {{/if}}
 </head>
-<body>
+  <body>
+    <div class="jumbo">
+      <h1 class="mainTitle">FresNode</h1>
+      <button class="postButton">Post</button>
+    </div>
+    <div class="container">
 
+      {{{body}}}
 
-  {{{body}}}
-
-
+    </div>
   </body>
 </html>

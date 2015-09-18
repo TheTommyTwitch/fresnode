@@ -1,6 +1,121 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-a {
-  color: #00B7FF; }
+h1 {
+  font-size: 5em;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  font-family: 'Candal', sans-serif; }
+
+.container {
+  width: 80%;
+  max-width: 700px;
+  margin: auto; }
+
+.jumbo {
+  height: 300px;
+  width: 100%;
+  background-color: green; }
+
+.postButton {
+  display: block;
+  font-family: 'Candal', sans-serif;
+  font-size: 1.3em;
+  width: 150px;
+  height: 50px;
+  border-width: medium;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  background-color: #00b300;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px; }
+
+.postButton:hover {
+  background-color: #00e600; }
+
+.newPost {
+  width: 100%;
+  height: 100px;
+  background-color: green;
+  border-width: 5px;
+  border-color: #00b300;
+  border-style: solid;
+  border-radius: 25px;
+  margin-top: 25px;
+  text-align: center; }
+
+.postText {
+  color: white;
+  text-align: center;
+  margin: 30px auto;
+  font-family: 'Candal', sans-serif;
+  max-width: 80%; }
+
+#overlay {
+  visibility: visible;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+#overlay div {
+  width: 400px;
+  height: 250px;
+  margin: 100px auto;
+  color: green;
+  font-family: 'Candal', sans-serif;
+  background-color: #fff;
+  border: 5px solid green;
+  border-radius: 25px;
+  padding: 15px;
+  text-align: center; }
+
+.submitButton {
+  display: block;
+  clear: left;
+  margin: auto;
+  font-family: 'Candal', sans-serif;
+  font-size: 1.3em;
+  width: 150px;
+  height: 50px;
+  border-width: medium;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  background-color: #00b300;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px; }
+
+.submitButton:hover {
+  background-color: green; }
+
+.textContent {
+  margin-top: 25px;
+  border-radius: 5px; }
