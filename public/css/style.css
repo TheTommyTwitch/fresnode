@@ -73,7 +73,7 @@ h1 {
   max-width: 80%; }
 
 #overlay {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -111,7 +111,7 @@ h1 {
   background-color: #00b300;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12px; }
+  margin-top: 8px; }
 
 .submitButton:hover {
   background-color: green; }
