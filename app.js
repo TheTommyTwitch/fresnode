@@ -6,9 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
+var util = require('util');
 
 var routes = require('./routes/index');
-var users = require('./routes/user');
 
 var app = express();
 
@@ -35,7 +35,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 
 // MongoDB Setup
 mongoose.connect('mongodb://localhost/fresnode-test');
