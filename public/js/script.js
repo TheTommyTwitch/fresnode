@@ -114,5 +114,7 @@ $(document).ready(function() {
 });
 
 var newPosting = function(name, message) {
-
+  var container = document.querySelector('.container');
+  var postDiv = document.createElement('div');
+  var post = container.appendChild(postDiv);
 };
