@@ -68,7 +68,8 @@ h1 {
   border-color: lighten(green, 10);
   border-style: solid;
   border-radius: 25px;
-  margin-top: 25px;
+  margin-top: 5px;
+	margin-bottom: 10px;
   text-align: center;
 }
 
@@ -78,6 +79,12 @@ h1 {
   margin: 30px auto;
   font-family: 'Candal', sans-serif;
   max-width: 80%;
+}
+
+.nameText {
+	font-family: 'Candal', sans-serif;
+	margin-left: 20px;
+	margin-top: 5px;
 }
 
 #overlay {

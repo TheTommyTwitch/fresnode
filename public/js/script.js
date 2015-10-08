@@ -9,6 +9,23 @@ $(document).ready(function() {
     $('#overlay').css('visibility', 'hidden');
   });
 
+
+  //Firebase setup --------------------------------------
+
+  var user = '';
+  var date = Date.now();
+  var myFirebaseRef = new Firebase("https://fresnode.firebaseio.com/");
+  $('#submitButton').on('click', function(e) {
+    myFirebaseRef.push({
+      name: user,
+      message: document.querySelector('#textContent').value,
+      time: date
+    });
+    $('#overlay').css('visibility', 'hidden');
+    $('.textContent').value = '';
+  });
+
+  // Facebook Auth -------------------------------------
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -22,6 +39,7 @@ $(document).ready(function() {
       testAPI();
       $('.loginDiv').hide();
 
+
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -32,6 +50,7 @@ $(document).ready(function() {
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
+      $postButton.hide();
     }
   }
 
@@ -86,10 +105,14 @@ $(document).ready(function() {
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
+      user = response.name;
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-
 });
+
+var newPosting = function(name, message) {
+
+};
