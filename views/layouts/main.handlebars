@@ -13,6 +13,11 @@
   <body>
     <div class="jumbo">
       <h1 class="mainTitle">FresNode</h1>
+      <div id="status"></div>
+      <div class="loginDiv">
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+      </div>
       <button class="postButton">Post</button>
     </div>
     <div class="container">
