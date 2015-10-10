@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 
   //Firebase setup --------------------------------------
-
+  //Put messages into database
   var user = '';
   var date = Date.now();
   var myFirebaseRef = new Firebase("https://fresnode.firebaseio.com/");
@@ -25,7 +25,15 @@ $(document).ready(function() {
     $('.textContent').value = '';
   });
 
-  createPostElements('Thomas', "Hello");
+  //Get data from database and append to page
+  myFirebaseRef.on("value", function(snapshot) {
+    var data = snapshot.val();
+    for (var key in data) {
+      var name = data[key].name;
+      var message = data[key].message;
+      createPostElements(name, message);
+    }
+  });
 
   // Facebook Auth -------------------------------------
   // This is called with the results from from FB.getLoginStatus().
@@ -114,6 +122,8 @@ $(document).ready(function() {
     });
   }
 });
+
+//functions to create dom elements for the posts
 
 var createPostElements = function(name, message) {
   var container = document.querySelector('.container');
