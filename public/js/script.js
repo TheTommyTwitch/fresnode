@@ -25,6 +25,8 @@ $(document).ready(function() {
     $('.textContent').value = '';
   });
 
+  createPostElements('Thomas', "Hello");
+
   // Facebook Auth -------------------------------------
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -113,8 +115,27 @@ $(document).ready(function() {
   }
 });
 
-var newPosting = function(name, message) {
+var createPostElements = function(name, message) {
   var container = document.querySelector('.container');
+  var postBody = document.querySelector('.postBody');
+  var post = document.createElement('div');
+  post.className = 'post';
+  postBody.appendChild(post);
+
   var postDiv = document.createElement('div');
-  var post = container.appendChild(postDiv);
+  postDiv.className = 'newPost';
+  post.appendChild(postDiv);
+
+  var nameText = document.createElement('div');
+  nameText.className = 'nameText';
+  post.appendChild(nameText);
+  var nameP = document.createElement('p');
+  nameText.appendChild(nameP);
+  nameP.innerHTML = 'Posted By: ' + name;
+
+  var newPost = post.appendChild(postDiv);
+  postText = document.createElement('p');
+  postText.className = 'postText';
+  newPost.appendChild(postText);
+  postText.innerHTML = message;
 };
