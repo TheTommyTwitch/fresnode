@@ -28,9 +28,9 @@ $(document).ready(function() {
   //Get data from database and append to page
   myFirebaseRef.on("value", function(snapshot) {
     var data = snapshot.val();
-    for (var key in data) {
-      var name = data[key].name;
-      var message = data[key].message;
+    for (var i = 0; i < data.length; i++) {
+      var name = data[i].name;
+      var message = data[i].message;
       createPostElements(name, message);
     }
   });
