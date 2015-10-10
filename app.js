@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-var mongoose = require('mongoose');
 var util = require('util');
 
 var routes = require('./routes/index');
@@ -25,7 +24,7 @@ app.engine('handlebars', exphbs({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 
-// app.use(favicon(__dirname + '/public/img/favicon.ico'));
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -37,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 // MongoDB Setup
-mongoose.connect('mongodb://localhost/fresnode-test');
+
 
 
 /// catch 404 and forward to error handler
