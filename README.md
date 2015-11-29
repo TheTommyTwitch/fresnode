@@ -1,6 +1,6 @@
 # FresNode
 
-FresNode is a small web application built for the Fresno Node.js meetup group. Users can log in with Facebook, and post a message for the group to see.
+FresNode is a small web application built for the Fresno Node.js meetup group. Users can log in with Facebook, and post a message for the group to see. The app is live [here](https://fresnode.herokuapp.com/)!
 
 ### Technologies used in this project include:
 
